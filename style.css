@@ -1,0 +1,278 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Poppins", sans-serif;
+}
+
+.page {
+  height: 100vh;
+  background-image: url(./images/bg-intro-desktop.png),
+    linear-gradient(rgba(255, 122, 122, 0.8), rgba(255, 122, 122, 0.9));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  width: 115rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50rem;
+  /* background-color: aqua; */
+}
+
+.left {
+  width: 50%;
+  color: white;
+}
+
+.left h1 {
+  width: 45rem;
+  font-size: 5rem;
+  margin-bottom: 2rem;
+}
+
+.left p {
+  width: 50rem;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.right {
+  width: 50%;
+}
+
+.trial {
+  width: 50rem;
+  height: 4.3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: hsl(248, 32%, 49%);
+  color: white;
+  border-radius: 5px;
+  margin-bottom: 3rem;
+  box-shadow: 0px 5px 2px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+.trial p {
+  font-size: 1.2rem;
+}
+
+.bold {
+  font-weight: 500;
+}
+
+.form {
+  background-color: white;
+  width: 50rem;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  padding: 3rem;
+  border-radius: 5px;
+  box-shadow: 0px 5px 2px rgba(0, 0, 0, 0.2);
+}
+
+.form-control {
+  margin-bottom: 10px;
+  padding-bottom: 0.5rem;
+  position: relative;
+}
+
+.form input {
+  height: 4.3rem;
+  width: 100%;
+  border: 1px solid hsl(246, 25%, 77%);
+  border-radius: 5px;
+
+  padding: 2rem;
+  font-weight: 800;
+}
+
+::placeholder {
+  font-weight: 700;
+  color: hsl(249, 10%, 26%);
+}
+
+.form input:focus {
+  border: 1px solid black;
+  outline: none;
+}
+
+.form-control i {
+  visibility: hidden;
+  font-size: 1.8rem;
+  position: absolute;
+  top: 12.5px;
+  right: 15px;
+}
+
+.form-control.error {
+  padding-bottom: 3rem;
+}
+
+.form-control.error i.fa-exclamation-circle {
+  color: #e74c3c;
+  visibility: visible;
+}
+
+.form-control small {
+  font-size: 1rem;
+  color: #e74c3c;
+  position: absolute;
+  bottom: 0.5rem;
+  right: 0;
+  visibility: hidden;
+}
+
+.form-control.error small {
+  visibility: visible;
+}
+
+.submit {
+  padding: 1rem;
+
+  border-radius: 5px;
+  border: 1px solid hsl(246, 25%, 77%);
+  background-color: hsl(154, 59%, 51%);
+  font-weight: 700;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  box-shadow: 0px 2px 2px hsl(154, 43%, 46%);
+  cursor: pointer;
+}
+
+.submit:hover {
+  background-color: hsl(154, 49%, 47%);
+}
+
+.terms {
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 1rem;
+  color: hsl(246, 25%, 77%);
+}
+
+.red {
+  color: hsl(0, 100%, 74%);
+  text-decoration: none;
+}
+
+@media (max-width: 1035px) {
+  .page {
+    height: 95rem;
+  }
+  .container {
+    flex-direction: column;
+    width: 50rem;
+  }
+
+  .left {
+    width: 100%;
+  }
+
+  .left h1 {
+    text-align: center;
+    font-size: 3.5rem;
+    width: auto;
+  }
+
+  .left p {
+    text-align: center;
+  }
+
+  .right {
+    width: 100%;
+    margin-top: 3rem;
+  }
+
+  .trial {
+    height: 8rem;
+  }
+
+  .trial p {
+    font-size: 1.5rem;
+  }
+
+  .form input {
+    height: 5rem;
+  }
+
+  .form-control i {
+    top: 15.5px;
+    right: 15px;
+  }
+
+  .submit {
+    padding: 1.5rem;
+    font-size: 1.25rem;
+  }
+}
+
+@media (max-width: 375px) {
+  .page {
+    height: 100rem;
+  }
+  .container {
+    flex-direction: column;
+    width: 37rem;
+  }
+
+  .left {
+    width: 100%;
+  }
+
+  .left h1 {
+    text-align: center;
+    font-size: 3rem;
+    width: auto;
+  }
+
+  .left p {
+    text-align: center;
+    padding: 1rem;
+    width: auto;
+  }
+
+  .right {
+    width: 100%;
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .trial {
+    height: 8rem;
+    width: 25rem;
+  }
+
+  .trial p {
+    font-size: 1.5rem;
+    width: 20rem;
+    text-align: center;
+  }
+
+  .form {
+    width: 30rem;
+  }
+
+  .form input {
+    height: 5rem;
+  }
+
+  .submit {
+    padding: 1.5rem;
+    font-size: 1.25rem;
+  }
+}
